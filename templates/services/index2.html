@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block extrastyles %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" >
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}" >
 {% endblock extrastyles %}
 
 {% block content %}
@@ -39,7 +39,6 @@
                 </div>
 
                 <div class="col">
-                  <h3 class="hotel-title sub-heading">{{ service.name }}</h3>
                   <p class="pt-3 font">{{ service.description|truncatechars:40 }}</p>
                 </div>
               </div>
@@ -116,6 +115,7 @@
       </div>
     </div>
 
+{% if review %}
 
 <div class="row">
   <div class="col-xs-12 col-12 hotels-list mb-5 pl-0 pt-0 pr-0">
@@ -130,39 +130,46 @@
       </div>
     </div>
 
+    <div class="row justify-content-center">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+     
+        <div class="row">
+          <div class="col-md-12">
+            <div class="carousel-inner">
 
-            <div class="row ftco-animate">
-              <div class="col-md-12">
-                <div class="carousel-testimony owl-carousel ftco-owl">
-
-                {% for obj in reviews_list %}
-                  <div class="item">
-                    <div class="testimony-wrap py-4 pb-5">
-                      <div class="user-img mb-4" style="background-image: url({{ obj.image.url }})">
-                        <span class="quote d-flex align-items-center justify-content-center">
-                          <i class="icon-quote-left"></i>
-                        </span>
-                      </div>
-                      <div class="text text-center">
-                        <p class="mb-4">{{ obj.review }}</p>
-                        <p class="name">{{ obj.name }}</p>
-                        <span class="position">Customer</span>
-                      </div>
-                    </div>
+              {% for obj in review %}
+              <div class="item">
+                <div class="testimony-wrap py-4 pb-5">
+                  <div class="user-img mb-4" style="background-image: url({{ obj.image.url }})">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
                   </div>
-              {% endfor %}
-          
-            </div>
-          </div>   
-    </div>
-    </div>
-    </div>
+                  <div class="text text-center">
+                    <p class="mb-4 message font">{{ obj.review }}</p>
+                    <p class="name font">{{ obj.name }}</p>
+                    <span class="position font">Customer</span>
+                  </div>
+                </div>
+              </div>
 
+              {% empty %}
+                <div class='text-center mt-3'>
+                  <p>No hotels available currently</p>
+                </div>
+
+              {% endfor %}
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
 </div>
 </div>
-
+{% endif %}
 
 </div>
 </div>
@@ -170,5 +177,4 @@
 
 
 {% block extrascipts %}
-
 {% endblock extrascipts %}

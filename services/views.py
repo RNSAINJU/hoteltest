@@ -11,9 +11,20 @@ class HomeView(TemplateView):
 		context = super().get_context_data(**kwargs)
 		context['services'] = Package.objects.filter(is_featured=True)
 		context['hotels'] = Hotel.objects.filter(is_featured=True)
-		context['review'] = Review.objects.filter(is_featured=True).first()
+		context['recommended'] = Hotel.objects.filter(is_recommended=True)
+		context['reviews_list'] = Review.objects.all()
 		return context
 
+class HomeView2(TemplateView):
+	template_name = 'services/index2.html'
+
+	def get_context_data(self, **kwargs):
+		context = super().get_context_data(**kwargs)
+		context['services'] = Package.objects.filter(is_featured=True)
+		context['hotels'] = Hotel.objects.filter(is_featured=True)
+		context['recommended'] = Hotel.objects.filter(is_recommended=True)
+		context['review'] = Review.objects.all()
+		return context
 
 class PackagesListView(ListView):
 	template_name = 'services/packages-list.html'
