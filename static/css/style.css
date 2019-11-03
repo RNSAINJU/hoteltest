@@ -15,8 +15,8 @@ body, html {
 
   @media (min-width: 768px) {
     .spacing {
-      padding-left: 7% !important;
-      padding-right: 7% !important;  
+      padding-left: 8% !important;
+      padding-right: 8% !important;  
   } 
 
   }
@@ -296,6 +296,7 @@ video {
 	font-size:20px;
 	font-weight:700;
 	letter-spacing: 8px;
+	padding-top:70px;
 	margin-left: 20px;
 	margin-bottom: 20px;
 	/*background:black;*/
