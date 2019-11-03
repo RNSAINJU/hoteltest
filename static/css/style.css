@@ -1,9 +1,25 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
 body, html {
   height: 100%;
   margin: 0;
   font-size: sans-serif;
 }
 
+.spacing {
+  padding: 20px !important; 
+}
+
+  @media (min-width: 768px) {
+    .spacing {
+      padding-left: 7% !important;
+      padding-right: 7% !important;  
+  } 
+
+  }
 
 header{
 		background: -webkit-linear-gradient(45deg, #dc1e31 0%, #15325d 100%)
