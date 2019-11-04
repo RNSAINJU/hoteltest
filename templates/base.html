@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Grenze|Maven+Pro|Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 
-    
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     
     {% block extrastyles %}
     {% endblock extrastyles %}
@@ -30,6 +30,11 @@
 	{% block extrascripts %}
 	{% endblock extrascripts %}
 
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  
 </body>
 
 </html>
