@@ -11,7 +11,7 @@
 <div id="body">
 
 <!-- Video Autoplay -->
-  <div id="video-autoplay" class="py-5" data-aos="fade-down">
+  <div id="video-autoplay" class="pt-3 pb-0" data-aos="fade-down">
     <div class="spacing">
       <div class="row">
           <!-- The video -->
@@ -40,7 +40,7 @@
 
                 <div class="col">
                   <h3 class="pt-2 hotel-title sub-heading">{{ service.name }}</h3>
-                  <p class="pt-2 font">{{ service.description|truncatechars:40 }}</p>
+                  <p class="pt-2 font">{{ service.description|truncatechars:80 }}</p>
                 </div>
               </div>
             </div>
@@ -96,7 +96,7 @@
 
           <div class="row mb-3">
             {% for hotel in recommended %}
-            <div class="col-4 mt-3">
+            <div class="col-4 my-3">
               <img src="{{ hotel.image.url }}" class="hotel-image-100">
             </div>
             <div class="col mt-3">
@@ -118,7 +118,7 @@
 
 
 <div class="row">
-  <div class="col-xs-12 col-12 hotels-list mb-5 px-0 pt-0" data-aos="fade-left">
+  <div class="col-xs-12 col-8 hotels-list mb-5 px-0 pt-0" data-aos="fade-left">
   <h1 class="text-center title2 main-heading pt-2 pb-2">Reviews</h1>
   <div class="container">
     
@@ -133,18 +133,18 @@
 
             <div class="row">
               <div class="col-md-12">
-                <div class="carousel-testimony owl-carousel ftco-owl">
+                <div class="">
 
                 {% for obj in reviews_list %}
                   <div class="item">
-                    <div class="testimony-wrap py-4 pb-5">
+                    <div class=" py-4 pb-4">
                       <div class="user-img mb-4" style="background-image: url({{ obj.image.url }})">
                         <span class="quote d-flex align-items-center justify-content-center">
                           <i class="icon-quote-left"></i>
                         </span>
                       </div>
                       <div class="text text-center">
-                        <p class="mb-4">{{ obj.review }}</p>
+                        <p class="message mb-2">{{ obj.review }}</p>
                         <p class="name">{{ obj.name }}</p>
                         <span class="position">Customer</span>
                       </div>

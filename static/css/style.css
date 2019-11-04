@@ -108,12 +108,12 @@ header{
 }
 
 #video-autoplay{
-	background-color:#000000c2 !important;
+	background-color:#332c2c00 !important;
 }
 /* Style the video: 100% width and height to cover the entire window */
 video {
 	object-fit: fill;
-	height: 330px;
+	height: 380px;
 	width: 100%;
 }
 
@@ -158,7 +158,7 @@ video {
 
 .hotel-image{
 	width: 100%;
-	height: 100px;
+	height: 120px;
 }
 
 .hotel-image-100{
@@ -202,25 +202,26 @@ video {
 
 
 .user-img {
- width: 100px;
- height: 100px;
+ width: 80px;
+ height: 80px;
  border-radius: 50%;
  position: relative;
  margin: 0 auto;
- margin-top: -75px; \
+ margin-top: -75px;
 }
 
 .message{
 	color:#c5c5c5;
+	font-size: 16px;
 }
 
 .name{
 	font-weight: bold;
-	font-size: 18px;
+	font-size: 16px;
 }
 
 .position{
-	font-size: 14px;
+	font-size: 12px;
 	color: #e43323;
 	/* background: -webkit-linear-gradient(45deg, #ff0055 0%, #ff6600 100%); */
 }
@@ -345,5 +346,6 @@ footer{
 	color: white;
 	background-color:#073054;
 }
+
 
 
