@@ -41,3 +41,5 @@ class PackagesDetailView(DetailView):
 class AboutView(TemplateView):
 	template_name='aboutus.html'
 	context_object_name = 'about'
+
+
