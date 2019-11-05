@@ -37,3 +37,7 @@ class PackagesListView(ListView):
 class PackagesDetailView(DetailView):
 	template_name = 'services/packages-detail.html'
 	context_object_name = 'package'
+
+class AboutView(TemplateView):
+	template_name='aboutus.html'
+	context_object_name = 'about'
