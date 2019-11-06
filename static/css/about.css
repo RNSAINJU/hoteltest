@@ -1,17 +1,12 @@
 
 /*about us*/
 
-a {
+/*a {
   color: #333;
   text-decoration: none;
 }
+*/
 
-.container {
-  max-width: 1100px;
-  margin: auto;
-  overflow: auto;
-  padding: 0 2rem;
-}
 
 .main-header {
   height: 55vh;
@@ -37,8 +32,8 @@ a {
   font-size: 2rem;
 }
 
-img {
-  width: 100%;
+.images {
+  width: 100% !important;
 }
 
 .card {
@@ -66,7 +61,7 @@ img {
 }
 
 
-.btn {
+/*.btn {
   display: inline-block;
   background: #000;
   color: #fff;
@@ -78,7 +73,7 @@ img {
 .btn:hover {
   opacity: 0.8;
 }
-
+*/
 @media(max-width:600px) {
   .card {
     display: block;

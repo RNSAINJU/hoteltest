@@ -2,18 +2,19 @@
 {% load static %}
 
 {% block extrastyles %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" >
+     <link rel="stylesheet" href="{% static 'css/style.css' %}" >
     <link rel="stylesheet" href="{% static 'css/about.css' %}" >
 {% endblock extrastyles %}
 
 {% block content %}
 
 
+{% include 'header.html' %}
 
     <main class="spacing">
     	<div class="row">
-      <section class="card">
-        <img src="https://i.ibb.co/VvC0vpN/paint-1.png" alt="" />
+      <section class="card" data-aos="fade-right">
+        <img class='images' src="https://i.ibb.co/VvC0vpN/paint-1.png" alt="" />
         <div>
           <h3>Acrylic Painting One</h3>
           <p>
@@ -27,7 +28,7 @@
       </section>
 
       <section class="card" data-aos="fade-left">
-        <img src="https://i.ibb.co/3NHjDcW/paint-2.png" alt="" />
+        <img class='images' src="https://i.ibb.co/3NHjDcW/paint-2.png" alt="" />
         <div>
           <h3>Acrylic Painting Two</h3>
           <p>
@@ -41,7 +42,7 @@
       </section>
 
       <section class="card" data-aos="fade-right">
-        <img src="https://i.ibb.co/0VywMkW/paint-3.png" alt="" />
+        <img class='images' src="https://i.ibb.co/0VywMkW/paint-3.png" alt="" />
         <div>
           <h3>Acrylic Painting Three</h3>
           <p>
@@ -55,7 +56,7 @@
       </section>
 
       <section class="card" data-aos="fade-left">
-        <img src="https://i.ibb.co/5LkJFRP/paint-4.png" alt="" />
+        <img class='images' src="https://i.ibb.co/5LkJFRP/paint-4.png" alt="" />
         <div>
           <h3>Acrylic Painting Four</h3>
           <p>
@@ -69,7 +70,7 @@
       </section>
 
       <section class="card" data-aos="fade-right">
-        <img src="https://i.ibb.co/61R8Q2y/paint-5.png" alt="" />
+        <img class='images' src="https://i.ibb.co/61R8Q2y/paint-5.png" alt="" />
         <div>
           <h3>Acrylic Painting Five</h3>
           <p>
@@ -82,6 +83,8 @@
         </div>
       </section>
     </main>
+
+{% include 'footer.html' %}
 
 {% endblock content %}
 

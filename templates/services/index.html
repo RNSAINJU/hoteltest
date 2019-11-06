@@ -2,11 +2,14 @@
 {% load static %}
 
 {% block extrastyles %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" >
+     <link rel="stylesheet" href="{% static 'css/style.css' %}" >
 {% endblock extrastyles %}
+
+
 
 {% block content %}
 
+{% include '../header.html' %}
 
 <div id="body">
 
@@ -25,14 +28,14 @@
 <!-- Video Autoplay -->
 
   <div class="spacing">
-    <div class="row ml-60 mr-60">
-      <div class="col-xs-12  col-8  hotels-list my-5 p-0 " data-aos="fade-right">
+    <div class="row">
+      <div class="col-xs-12 col-md-8  hotels-list my-5 p-0 " data-aos="fade-right">
         <h1 class="text-center title main-heading py-2">Services</h1>
         <div class="spacing">
           <div class="row mb-2">
 
             {% for service in services %}
-            <div class="col-6 my-3">
+            <div class="col-md-6 my-3">
               <div class="row list">
                 <div class="col">
                   <img src="{{ service.image.url }}" class="hotel-image">
@@ -107,7 +110,7 @@
 
 
     <div class="row">
-      <div class="col-xs-12 col-8 hotels-list mb-5 p-0" data-aos="fade-right">
+      <div class="col-xs-12 col-md-8 hotels-list mb-5 p-0" data-aos="fade-right">
       <h1 class="text-center title2 main-heading py-2">Recommended</h1>
         <div class="container">
 
@@ -135,7 +138,7 @@
 
 
 <div class="row">
-  <div class="col-xs-12 col-8 hotels-list mb-5 px-0 pt-0" data-aos="fade-left">
+  <div class="col-xs-12 col-md-8 hotels-list mb-5 px-0 pt-0" data-aos="fade-left">
   <h1 class="text-center title2 main-heading pt-2 pb-2">Reviews</h1>
   <div class="container">
     
@@ -189,7 +192,9 @@
 </div>
 </div>
 
+  {% include '../footer.html' %}
 {% endblock content %}
+
 
 
 {% block extrascipts %}
