@@ -363,6 +363,19 @@ footer{
 }
 
 /*contact us */
+
+.contact{
+	
+  	box-shadow: 10px 10px 10px #8888883d;
+	background-color:#000000c2;
+	color:white;
+}
+
+.detail{
+	border-right: 2px solid white !important;
+}
+
+
 .mapouter{
 	position:relative;
 	/*text-align:right;*/

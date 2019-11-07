@@ -46,3 +46,12 @@ class Review(models.Model):
 
 	def __str__(self):
 		return self.name
+
+class Enquiry(models.Model):
+	name = models.CharField(max_length=255)
+	email = models.EmailField()
+	mobilenumber=models.CharField(max_length=14)
+	message=models.TextField()
+
+	def __str__(self):
+		return self.name
