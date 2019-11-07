@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extrastyles %}
+     <link rel="stylesheet" href="{% static 'css/style.css' %}" >
+{% endblock extrastyles %}
+
+{% block content %}
+{% include 'header.html' %}
+
+<div class="spacing">
+<div class="row">
+<div class="mapouter">
+	<div class="gmap_canvas">
+		<iframe width="100%" height="600 id="gmap_canvas" src="https://maps.google.com/maps?q=kathmandu&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+			
+		</iframe>
+			<a href="https://www.embedgooglemap.net/blog/elementor-review/">
+			</a>
+	</div>
+</div>
+</div>
+</div>
+
+{% include 'footer.html' %}
+
+{% endblock %}

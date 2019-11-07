@@ -1,11 +1,11 @@
 
 /*about us*/
 
-/*a {
+.button-service{
   color: #333;
   text-decoration: none;
 }
-*/
+
 
 
 .main-header {
@@ -61,7 +61,7 @@
 }
 
 
-/*.btn {
+.btn2{
   display: inline-block;
   background: #000;
   color: #fff;
@@ -70,10 +70,10 @@
   cursor: pointer;
 }
 
-.btn:hover {
+.btn2:hover {
   opacity: 0.8;
 }
-*/
+
 @media(max-width:600px) {
   .card {
     display: block;

@@ -32,6 +32,11 @@ class PackagesListView(ListView):
 	context_object_name = 'packages'
 	paginate_by = 10
 
+class ServiceListView(ListView):
+	template_name='services.html'
+	queryset=Package.objects.filter(is_featured=True)
+	context_object_name='services'
+	paginate_by=5
 
 
 class PackagesDetailView(DetailView):
