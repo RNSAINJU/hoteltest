@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views.generic import TemplateView, ListView, DetailView
 
 from .models import Package, Hotel, Review
+from home.models import Imageslider
 from .forms import NewEnquiryForm
 
 class HomeView(TemplateView):
@@ -9,6 +10,7 @@ class HomeView(TemplateView):
 
 	def get_context_data(self, **kwargs):
 		context = super().get_context_data(**kwargs)
+		context['imagesliders']=Imageslider.objects.all()
 		context['services'] = Package.objects.filter(is_featured=True)
 		context['hotels'] = Hotel.objects.filter(is_featured=True)
 		context['recommended'] = Hotel.objects.filter(is_recommended=True)

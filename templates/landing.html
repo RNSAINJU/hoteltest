@@ -7,14 +7,24 @@
 
 {% block content %}
 
-<div class="bg">
+<a href="{% url 'home' %}">
+<div class="bg" onclick='window.location.href="{% url 'home' %} "'>
   <div class="floating" >
     <!-- <h3>divi elementary</h3> -->
-    <h1 data-aos="fade-right"> Welcome to Kathmandu</h3>
-        <a href="{% url 'home' %}">
-          <button class="btn-welcome mt-3 float-right" data-aos="fade-left">Visit Site</button>
-        </a>
+    <h1 data-aos="fade-right"> Welcome to Ktm Safari</h3>
+
+          <!-- <button class="btn-welcome mt-3 float-right" data-aos="fade-left">Visit Site</button> -->
+
 
   </div>
-
+        </a>
 {% endblock%}
+
+{% block extrascipts %}
+	    <script>
+        var timer = setTimeout(function() {
+            window.location='{% url 'home' %}'
+        }, 30);
+    </script>
+{% endblock extrascipts %}
+
