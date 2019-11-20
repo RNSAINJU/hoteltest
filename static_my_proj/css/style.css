@@ -3,7 +3,6 @@
 *{
 	padding: 0;
 	margin: 0;
-
 }
 
 body, html {
@@ -15,18 +14,30 @@ body, html {
 }
 
 .dropdown-menu{
-    background: -webkit-linear-gradient(45deg, #dc1e31 0%, #15325d 100%)
+	margin-top: 0 !important;
+	padding-top: 0 !important;
+	padding-left: 4px;
+	padding-right: 2px;
+    background: #141414d1;
 }
 
 .dropdown:hover>.dropdown-menu {
   display: block;
 }
 
+.spacing-blank {
+	padding: 0 0 0 0;
+}
+
+.spacing-default {
+  padding-left: 20px !important; 
+  padding-right: 20px !important;
+}
 
 /*custom container*/
 .spacing {
-  padding-left: 20px !important; 
-  padding-right: 20px !important;
+  padding-left: 5px !important; 
+  padding-right: 5px !important;
 }
 
 .spacing-top{
@@ -49,15 +60,21 @@ padding-bottom:40px !important;
 
    @media (min-width: 320px) {
     .spacing {
+      padding-left: 1% !important;
+      padding-right: 1% !important;  
+  } 
+
+   @media (min-width: 320px) {
+    .spacing-default {
       padding-left: 5% !important;
       padding-right: 5% !important;  
   } 
 
-
   }
 
 header{
-		background: -webkit-linear-gradient(45deg, #dc1e31 0%, #15325d 100%)
+		/*background: -webkit-linear-gradient(45deg, #dc1e31 0%, #15325d 100%);*/
+		background-color: #141414;
 }
 
 #body{
@@ -66,7 +83,6 @@ header{
 }
 
 #background-image{
-		background-image: url("../bg-image.jpg");
 		background-attachment: fixed;
 		background-position: center;
 		background-repeat: no-repeat;
@@ -121,14 +137,24 @@ header{
 
 .navbar{
 	font-family: 'Maven Pro', sans-serif !important;
-	font-size: 16px;
+	font-size: 15px;
 	margin-left: 0;
 	/* background-color: #b80b06 !important; */
 }
 
-.carousel-item{
+.carousel-item-main{
   height: 50vh;
   min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.carousel-item-accomodation{
+  height: 10vh;
+  min-height: 30px;
   background: no-repeat center center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -144,6 +170,7 @@ header{
 
 .nav-link{
 		color: #d6caca !important;
+		text-decoration: none;
 }
 
 .active{
@@ -152,8 +179,8 @@ header{
 }
 
 .nav-link:hover{
-	background-color: #073054;
-	color: white !important;
+	background-color: white;
+	color:  #141414 !important;
 	border-radius: 8px ;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
 	transition: 0.5s;
@@ -175,7 +202,7 @@ header{
 
 #image-autoplay{
 	background-color:#332c2c00 !important;
-	padding-top: 48px;
+	/*padding-top: 48px;*/
 }
 /* Style the video: 100% width and height to cover the entire window */
 
@@ -242,8 +269,8 @@ header{
 }
 
 .search-box{
-height: 30px !important;
-  width: 325px !important;
+    height: 30px !important;
+    width: 295px !important;
 }
 
 /* @media only screen and (max-width: 600px) {
@@ -301,13 +328,13 @@ height: 30px !important;
 
 .btn-welcome{
 	background-color: white;
-  border: none;
+    border: none;
 	border-radius: 8px;
-  padding: 10px 40px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
+    padding: 10px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
 }
 
 
@@ -407,14 +434,14 @@ height: 30px !important;
 
 
 .footer{
-    height:340px;
+    height:300px;
 	font-family: 'Maven Pro', sans-serif !important;
 	color: white;
-	background-color:#073054;
+	background-color:#141414;
 }
 
 .logo-group2{
-padding-top:20px;
+padding-top:25px;
 }
 
 .footer-image{
@@ -478,6 +505,11 @@ padding-top:20px;
 }
 
 
+.links-footer{
+	font-size: 16px !important;
+}
 
-
+.footer-info{
+	border: 1px solid whitesmoke;
+}
 

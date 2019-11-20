@@ -2,90 +2,45 @@
 {% load static %}
 
 {% block extrastyles %}
-     <link rel="stylesheet" href="{% static 'css/style.css' %}" >
-    <link rel="stylesheet" href="{% static 'css/about.css' %}" >
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
 {% endblock extrastyles %}
 
 {% block content %}
+    <main class="spacing spacing-top">
+        <div class="row">
+            {% for item in aboutus %}
 
 
-{% include 'header.html' %}
-<div id="contact-bg">
-    <main class="spacing">
-    	<div class="row">
-      <section class="card" data-aos="fade-right">
-        <img class='images' src="https://i.ibb.co/VvC0vpN/paint-1.png" alt="" />
-        <div>
-          <h3>Acrylic Painting One</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod error
-            enim laudantium, animi veniam libero eveniet culpa unde perferendis
-            illo fugit corporis, voluptatibus totam dolorum, maiores magnam
-            officia. Ab, delectus.
-          </p>
-          <!-- <a href="#" class="btn">Buy Now</a> -->
-        </div>
-      </section>
+            <section class="card" data-aos="fade-right">
+                <img class='images' src="{{ item.image.url }}" alt=""/>
+                <div>
+                    <h3>{{ item.title }}</h3>
+                    <p>
+                        {{ item.description }}
+                    </p>
+                    <!-- <a href="#" class="btn">Buy Now</a> -->
+                </div>
+            </section>
 
-      <section class="card" data-aos="fade-left">
-        <img class='images' src="https://i.ibb.co/3NHjDcW/paint-2.png" alt="" />
-        <div>
-          <h3>Acrylic Painting Two</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod error
-            enim laudantium, animi veniam libero eveniet culpa unde perferendis
-            illo fugit corporis, voluptatibus totam dolorum, maiores magnam
-            officia. Ab, delectus.
-          </p>
-          <!-- <a href="#" class="btn">Buy Now</a> -->
-        </div>
-      </section>
+            {% endfor %}
 
-      <section class="card" data-aos="fade-right">
-        <img class='images' src="https://i.ibb.co/0VywMkW/paint-3.png" alt="" />
-        <div>
-          <h3>Acrylic Painting Three</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod error
-            enim laudantium, animi veniam libero eveniet culpa unde perferendis
-            illo fugit corporis, voluptatibus totam dolorum, maiores magnam
-            officia. Ab, delectus.
-          </p>
-          <!-- <a href="#" class="btn">Buy Now</a> -->
-        </div>
-      </section>
+<!--             <section class="card" data-aos="fade-left">
+                <img class='images' src="https://i.ibb.co/3NHjDcW/paint-2.png" alt=""/>
+                <div>
+                    <h3>Acrylic Painting Two</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod error
+                        enim laudantium, animi veniam libero eveniet culpa unde perferendis
+                        illo fugit corporis, voluptatibus totam dolorum, maiores magnam
+                        officia. Ab, delectus.
+                    </p> -->
+                    <!-- <a href="#" class="btn">Buy Now</a> -->
+                <!-- </div> -->
+            <!-- </section> -->
 
-      <section class="card" data-aos="fade-left">
-        <img class='images' src="https://i.ibb.co/5LkJFRP/paint-4.png" alt="" />
-        <div>
-          <h3>Acrylic Painting Four</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod error
-            enim laudantium, animi veniam libero eveniet culpa unde perferendis
-            illo fugit corporis, voluptatibus totam dolorum, maiores magnam
-            officia. Ab, delectus.
-          </p>
-          <!-- <a href="#" class="btn">Buy Now</a> -->
-        </div>
-      </section>
 
-      <section class="card" data-aos="fade-right">
-        <img class='images' src="https://i.ibb.co/61R8Q2y/paint-5.png" alt="" />
-        <div>
-          <h3>Acrylic Painting Five</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod error
-            enim laudantium, animi veniam libero eveniet culpa unde perferendis
-            illo fugit corporis, voluptatibus totam dolorum, maiores magnam
-            officia. Ab, delectus.
-          </p>
-          <!-- <a href="#" class="btn">Buy Now</a> -->
-        </div>
-      </section>
     </main>
-</div>
-{% include 'footer.html' %}
-
 {% endblock content %}
 
 

@@ -1,23 +1,40 @@
 {% load static%}
       <div class="row p-0">
-        <div class="col-xs-12 col-md-12  p-0 ">
+        <div class="spacing-default col-md-5 footer">
+
+        <div class="links-footer col-md-3 mt-4 p-0 pb-4">
+          <a class="nav-link" href="{% url 'about' %}">About Us</a>
+          <a class="nav-link" href="{% url 'contactus' %}">Contact Us</a>
+        </div>
+
+        <div class="footer-info col-md-6 pr-2">
+          <p class="mt-2">Baneshwor</p>
+          <p>0231023902</p>
+        </div>
+
+        </div>
+
+        <div class="col-xs-12 col-md-7  p-0 ">
           <!--                    <h1 class="text-center title main-heading py-2">Services</h1>-->
           <div class="spacing footer">
 
             <div class="row">
-              <div class="col d-flex justify-content-center logo-group2">
+              <div class="col logo-group2">
                 <div class="logo-group">
                   <a href="#"><img src="{% static 'logo/fb.svg' %}"  width="65px" height="65px"/></a>
                   <a href="#"><img src="{% static 'logo/insta.png' %}" class="ml-2"width="65px" height="65px"/></a>
                   <a href="#"><img src="{% static 'logo/twitter.png' %}" class="ml-2" width="68px" height="72px"/></a>
                 </div>
               </div>
+
             </div>
 
 
 
+
+
         <div class="row mb-2">
-          <div class="col  mt-20 pt-20 d-flex justify-content-center ">
+          <div class="offset-md-1  mt-20 pt-20">
             <a class="mt-20" href="{% url 'landing' %}"><img src="{% static 'logo/nepal.svg' %}" class="footer-image"/></a>
           </div>
         </div>
@@ -25,8 +42,8 @@
         <div class="row">
           <!-- Copyright -->
 
-          <div class="col d-flex justify-content-center ">
-            <div class="footer-copyright text-center py-3">
+          <div class="col">
+            <div class="footer-copyright pt-2 m-0 p-0">
               © 2019 Copyright:
               <a href="#"> ktmsafari.com</a>
             </div>

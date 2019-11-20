@@ -10,36 +10,87 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto nav-links">
-          <li class="nav-item active">
-            <a class="nav-link" href="{% url 'landing' %}">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'about' %}">About Us</a>
-          </li>
 
 
-<li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" data-toggle="dropdown"  href="{% url 'services' %}">Services
+
+<li class="nav-item dropdown mt-2">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown"  href="{% url 'services' %}">Valley Tours
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a class="nav-link" href="#">Flight booking</a></li>
+          <li><a class="nav-link" href="#">Kathmandu Walks</a></li>
+          <li><a class="nav-link" href="#">Kathmandu Cycles</a></li>
+          <li><a class="nav-link" href="#">Kathmandu Tours</a></li>
+        </ul>
+      </li>
 
-          <li class="nav-item dropdown">
+
+      <li class="nav-item dropdown mt-2">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown"  href="{% url 'services' %}">Outbound Packages
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a class="nav-link" href="#">Pokhara Packages</a></li>
+          <li><a class="nav-link" href="#">Chitwan Packages</a></li>
+          <li><a class="nav-link" href="#">Lumbini Packages</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item dropdown mt-2">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown"  href="{% url 'services' %}">Trekking and Adventures
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a class="nav-link" href="#">Trekking</a></li>
+          <li><a class="nav-link" href="#">Expeditions</a></li>
+          <li><a class="nav-link" href="#">Rafting</a></li>
+          <li><a class="nav-link" href="#">Bungee</a></li>
+          <li><a class="nav-link" href="#">Mountain Flights</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item dropdown mt-2">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown"  href="{% url 'services' %}">Accomodation
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a class="nav-link" href="#">Hostels</a></li>
+          <li><a class="nav-link" href="#">Budget Accomodation</a></li>
+          <li><a class="nav-link" href="#">Premium Accomodation</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item dropdown mt-2">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown"  href="{% url 'services' %}">International packages
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a class="nav-link" href="#">Thailand/Singapore/Malaysia</a></li>
+          <li><a class="nav-link" href="#">Dubai/Indonesia</a></li>
+          <li><a class="nav-link" href="#">China/Japan/Korea</a></li>
+          <li><a class="nav-link" href="#">India/Bhutan</a></li>
+        </ul>
+      </li>
+
+            <li class="nav-item dropdown mt-2">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown"  href="{% url 'services' %}">Rentals
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a class="nav-link" href="#">Vehicles</a></li>
+          <li><a class="nav-link" href="#">Cycle</a></li>
+          <li><a class="nav-link" href="#">Equipment</a></li>
+        </ul>
+      </li>
+
+<!--           <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#">Tours & Travels</a>
             <ul class="dropdown-menu" style="backgroun-color:red;">
              <li><a class="nav-link" href="#">Domestic</a></li>
               <li><a class="nav-link" href="#">International</a></li>
             </ul>
+          </li> -->
+
+
+          <li class="nav-item mt-2">
+            <a class="nav-link" href="{% url 'about' %}">About Us</a>
           </li>
 
-          <li><a class="nav-link" href="#">Accomodation</a></li>
-          <li><a class="nav-link" href="#">Rental Service</a></li>
-          <li><a class="nav-link" href="#">Custom packages</a></li>
-        </ul>
-      </li>
-
-
-          <li class="nav-item">
+          <li class="nav-item mt-2">
             <a class="nav-link" href="{% url 'contactus' %}">Contact Us</a>
           </li>
 
@@ -47,7 +98,7 @@
       </div>
 
       <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2 search-box" type="search" placeholder="Search" aria-label="Search">
+        <input class="form-control mr-sm-2 search-box" type="search" placeholder="Explore Your Adventures Here" aria-label="Search">
         <button type="button" class="btn btn-danger search ml-1">
             <i class="fas fa-search search-icon" ></i>
           </button>

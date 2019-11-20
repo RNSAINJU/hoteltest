@@ -10,7 +10,8 @@
 
 
 {% include 'header.html' %}
-<div id="contact-bg">
+<div id="body pb-5">
+    <div id="background-image">
     <main class="spacing">
     	<div class="row">
         {% for service in services %}
@@ -27,9 +28,9 @@
       </section>
       {% endfor %}
     </main>
-</div>
 {% include 'footer.html' %}
-
+    </div>
+</div>
 {% endblock content %}
 
 

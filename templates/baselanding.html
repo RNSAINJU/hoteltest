@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title> Kathmadnu Safari</title>
+    <title> Home</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,17 +21,11 @@
     {% endblock extrastyles %}
 </head>
 <body>
-  {% include 'header.html' %}
 
-<div id="body pb-5">
-    <div id="background-image" style="background-image: url('{{ backgroundimage.image.url}}');">
 	{% block content %}
 	{% endblock content %}
-          {% include 'footer.html' %}
     </div>
 </div>
-
-
 
 	{% block extrascripts %}
 	{% endblock extrascripts %}
