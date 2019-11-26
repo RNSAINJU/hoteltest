@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '-r1f0tevxklsuug_ddxp81_m0cx3l5^ls^r^a60pocnbsce3ph'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['ktmsafari','127.0.0.1','rnsainju.pythonanywhere.com']
 
