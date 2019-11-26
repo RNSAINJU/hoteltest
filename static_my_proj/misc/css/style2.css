@@ -1,0 +1,236 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+
+header{
+		background-color:#a71533;
+}
+
+#body{
+		background-image: url("../image1.jpg");
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+}
+
+.bg {
+  /* The image used */
+  background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("../image1.jpg") no-repeat;
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.large-heading{
+	font-size: 26px;
+	font-family: 'Grenze', serif;
+}
+
+.main-heading{
+	font-size: 22px;
+	font-family: 'Grenze', serif;
+}
+
+.sub-heading{
+	font-size: 17px;
+	font-weight: bold;
+	font-family: 'Grenze', serif;
+}
+
+.navbar{
+	font-family: 'Maven Pro', sans-serif !important;
+	font-size: 16px;
+
+	/* background-color: #b80b06 !important; */
+}
+
+.brand{
+	color: #073054 !important;
+	font-weight: bold;
+}
+
+.nav-link{
+		color: #d6caca !important;
+}
+
+.active{
+	font-weight: bold;
+	color: black;
+}
+
+.nav-link:hover{
+	background-color: #073054;
+	color: white !important;
+	border-radius: 8px ;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
+	transition: 0.5s;
+}
+
+
+.search{
+	background-color:#073054 !important;
+}
+
+#video-autoplay{
+	background-color:#79797985 !important;
+}
+/* Style the video: 100% width and height to cover the entire window */
+video {
+	object-fit: fill;
+	height: 330px;
+	width: 100%;
+}
+
+
+.title{
+	color: white;
+	background-color: #a71533 !important;
+	border-radius: 4px;
+}
+
+.title2{
+	color: white;
+	background-color: #073054 !important;
+	border-radius: 4px;
+}
+
+.title3{
+	color: white;
+	background-color: #28a745 !important;
+	border-radius: 4px;
+}
+
+.hotels-list{
+		width:100%;
+  	box-shadow: 10px 10px 10px #8888883d;
+		background-color:#fafafae0;
+		color:black;
+		 /* #fafafae0; */
+}
+
+.list:hover{
+	  background-color: #fafafae0 !important;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
+		transition: 0.5s;
+		border-radius: 4px;
+		color:black;
+}
+
+.hotel-image{
+	width: 100%;
+	height: 100px;
+}
+
+.hotel-image-100{
+	width: 100%;
+	height: 150px;
+}
+
+.font{
+	font-size: 13px;
+	/* font-family: 'Lato', sans-serif; */
+			font-family: 'Work Sans', sans-serif !important;
+	/* font-family: 'Maven Pro', sans-serif !important; */
+	/* font-family: 'Maven Pro', sans-serif; */
+}
+
+
+.search-box{
+	height: 35px !important;
+  width: 155px !important;
+}
+
+.book-button{
+		margin-top: 40px;
+		background-color: #b60606cf !important;
+		font-size: 10px;
+		font-family: 'Grenze', serif;
+}
+
+.preferred{
+		border-radius: 5px;
+		padding: 10px;
+}
+
+footer{
+	font-family: 'Maven Pro', sans-serif !important;
+	color: white;
+	background-color:#073054;
+}
+
+.user-img {
+ width: 100px;
+ height: 100px;
+ border-radius: 50%;
+ position: relative;
+ margin: 0 auto;
+ margin-top: -75px; \
+}
+
+.message{
+	color:black;
+}
+
+.name{
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.position{
+	font-size: 14px;
+	color: #e43323;
+	/* background: -webkit-linear-gradient(45deg, #ff0055 0%, #ff6600 100%); */
+}
+
+.floating{
+	color: white;
+	position: fixed;
+	top: 35%;
+	left: 35%;
+	font-family: 'Maven Pro', sans-serif !important;
+}
+
+.btn-welcome{
+	background-color: white;
+  border: none;
+	border-radius: 8px;
+  padding: 10px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+
+.btn-welcome:hover{
+	background-color: transparent;
+	color: whitesmoke;
+	font-size:30px;
+	padding: 20px 80px;
+	border: 2px solid white;
+	text-decoration: none;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
+	transition: 0.7s;
+}
+
+.btn-welcome:hover  .bg{
+	  /* The image used */
+	 background: -webkit-linear-gradient(45deg, #15325d 0%, #dc1e31 100%);
+	  text-align: center;
+	  /* Full height */
+	  height: 100%;
+
+	  /* Center and scale the image nicely */
+	  background-position: center;
+	  background-repeat: no-repeat;
+	  background-size: cover;
+			transition: 0.10s;
+}

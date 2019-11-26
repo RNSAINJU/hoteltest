@@ -1,0 +1,30 @@
+{% extends 'baselanding.html' %}
+{% load static %}
+
+{% block extrastyles %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" >
+{% endblock extrastyles %}
+
+{% block content %}
+
+<a href="{% url 'home' %}">
+<div class="bg" onclick='window.location.href="{% url 'home' %} "'>
+  <div class="floating" >
+    <!-- <h3>divi elementary</h3> -->
+    <h1 data-aos="fade-right"> Welcome to Ktm Safari</h3>
+
+          <!-- <button class="btn-welcome mt-3 float-right" data-aos="fade-left">Visit Site</button> -->
+
+
+  </div>
+        </a>
+{% endblock%}
+
+{% block extrascipts %}
+	    <script>
+        var timer = setTimeout(function() {
+            window.location='{% url 'home' %}'
+        }, 30);
+    </script>
+{% endblock extrascipts %}
+

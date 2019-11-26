@@ -1,0 +1,180 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extrastyles %}
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}" >
+{% endblock extrastyles %}
+
+{% block content %}
+
+
+<div id="body">
+
+<!-- Video Autoplay -->
+  <div id="video-autoplay" class="pt-5 pb-5">
+    <div class="container">
+      <div class="row">
+          <!-- The video -->
+        <video autoplay muted loop id="myVideo">
+          <source src="{% static 'timelapse.mp4' %}" type="video/mp4">
+        </video>
+
+      </div>
+    </div>
+  </div>
+<!-- Video Autoplay -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12  col-8  hotels-list mt-5 mb-5 p-0">
+        <h1 class="text-center title main-heading pt-2 pb-2">Services</h1>
+        <div class="container">
+          <div class="row mb-2">
+
+            {% for service in services %}
+            <div class="col-6 mb-3 mt-3">
+              <div class="row list">
+                <div class="col">
+                  <img src="{{ service.image.url }}" class="hotel-image">
+                </div>
+
+                <div class="col">
+                  <p class="pt-3 font">{{ service.description|truncatechars:40 }}</p>
+                </div>
+              </div>
+            </div>
+
+            {% empty %}
+
+            <div class="mt-3 mb-3 col text-center">
+              <div class='text-center mt-3'>
+              <p>No services available currently</p>
+              </div>
+            </div>
+
+            {% endfor %}
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-xs-12 col hotels-list mt-5 mb-5 ml-4 p-0">
+        <h1 class="text-center title2 main-heading pt-2 pb-2">Hotels</h1>
+          <div class="container">
+              <div class="row mb-2">
+                <div class="mt-3 mb-3 col text-center">
+                {% for hotel in hotels %}
+                
+                  <p>
+                    <a href='{{ hotel.link }}' title='{{ hotel.description }}' class="hotel-title sub-heading">
+                    {{ hotel.name }}
+                    </a>
+                  </p>
+
+                {% empty %}
+                <div class='text-center mt-3'>
+                  <p>No hotels available currently</p>
+                </div>
+                
+                {% endfor %}
+
+                </div>
+                </div>
+
+          </div>
+      </div>
+
+  </div>
+
+
+    <div class="row">
+      <div class="col-xs-12 col-8 hotels-list mb-5 p-0">
+      <h1 class="text-center title2 main-heading pt-2 pb-2">Recommended</h1>
+        <div class="container">
+
+          <div class="row mb-3">
+            {% for hotel in recommended %}
+            <div class="col-4 mt-3">
+              <img src="{{ hotel.image.url }}" class="hotel-image-100">
+            </div>
+            <div class="col mt-3">
+              <h3 class="hotel-title sub-heading">{{ hotel.name }}</h3>
+              <p class="pt-2 font">{{ hotel.description }}</p>
+            </div>
+
+            {% empty %}
+                <div class='text-center mt-3'>
+                  <p>No hotels available currently</p>
+                </div>
+                
+            {% endfor %}
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+{% if review %}
+
+<div class="row">
+  <div class="col-xs-12 col-12 hotels-list mb-5 pl-0 pt-0 pr-0">
+  <h1 class="text-center title2 main-heading pt-2 pb-2">Reviews</h1>
+  <div class="container">
+    
+    <div class="row justify-content-center mb-5">
+      <div class="col-md-7  text-center mt-3">
+        <span class="subheading"></span>
+        <h2 class="mb-3 large-heading">What People Say</h2>
+        <p class="font">Some of our customer reviews from facebook.</p>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+     
+        <div class="row">
+          <div class="col-md-12">
+            <div class="carousel-inner">
+
+              {% for obj in review %}
+              <div class="item">
+                <div class="testimony-wrap py-4 pb-5">
+                  <div class="user-img mb-4" style="background-image: url({{ obj.image.url }})">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text text-center">
+                    <p class="mb-4 message font">{{ obj.review }}</p>
+                    <p class="name font">{{ obj.name }}</p>
+                    <span class="position font">Customer</span>
+                  </div>
+                </div>
+              </div>
+
+              {% empty %}
+                <div class='text-center mt-3'>
+                  <p>No hotels available currently</p>
+                </div>
+
+              {% endfor %}
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+{% endif %}
+
+</div>
+</div>
+{% endblock content %}
+
+
+{% block extrascipts %}
+{% endblock extrascipts %}

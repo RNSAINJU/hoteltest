@@ -21,6 +21,7 @@ class Package(models.Model):
 	name = models.CharField(max_length=255)
 	price = models.DecimalField(max_digits=12, decimal_places=2)
 	discounted_price = models.DecimalField(max_digits=12, decimal_places=2)
+	city=models.CharField(default=False,max_length=255)
 	description = models.TextField(blank=True)
 	image = models.ImageField(upload_to='packages/%y/%m/', blank=True, null=True)
 	is_active = models.BooleanField(default=True)
